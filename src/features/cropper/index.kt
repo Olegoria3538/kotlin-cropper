@@ -2,7 +2,8 @@ package GUISamples
 
 import GUISamples.features.cropper.createMenu
 import GUISamples.features.cropper.createSupperCropperRectangle
-import GUISamples.features.cropper.utils.saveImage
+import GUISamples.features.cropper.utils.quicksaveCanvas
+import GUISamples.features.cropper.utils.saveCanvas
 import GUISamples.utils.setImageIntoCanvas
 import javafx.event.EventHandler
 import javafx.scene.Scene
@@ -33,8 +34,12 @@ fun Cropper(image: Image) {
         pressedKeys.add(
             e.code
         )
-        if (pressedKeys.contains(KeyCode.CONTROL) && pressedKeys.contains(KeyCode.S))
-            saveImage(canvas)
+        if (pressedKeys.contains(KeyCode.CONTROL)) {
+            if (pressedKeys.contains(KeyCode.S))
+                saveCanvas(canvas)
+            if(pressedKeys.contains(KeyCode.Q))
+                quicksaveCanvas(canvas)
+        }
     }
     scene.onKeyReleased = EventHandler { e: KeyEvent ->
         pressedKeys.remove(

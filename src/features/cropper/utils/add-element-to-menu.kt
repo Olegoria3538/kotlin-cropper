@@ -12,5 +12,5 @@ fun addElementToMenu(menu: Menu, el: Node) {
 }
 
 fun addElementsToMenu(menu: Menu, els: List<Node>) {
-    els.forEach({ x -> addElementToMenu(menu, x) })
+    els.forEach { x -> addElementToMenu(menu, x) }
 }
