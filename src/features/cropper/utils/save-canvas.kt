@@ -15,7 +15,7 @@ import javax.imageio.ImageIO
 
 
 private fun writableImageSave(img: WritableImage, file: File) {
-    DataOutputStream(FileOutputStream("kek.lol")).use { dos -> dos.writeUTF(file.path) }
+    DataOutputStream(FileOutputStream("super-save.txt")).use { dos -> dos.writeUTF(file.path) }
     ImageIO.write(
         SwingFXUtils.fromFXImage(img, null),
         "png", file

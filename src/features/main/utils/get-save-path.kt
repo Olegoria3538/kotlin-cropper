@@ -7,7 +7,7 @@ import java.io.IOException
 
 fun getLastSavePath(): String? {
     try {
-        DataInputStream(FileInputStream("kek.lol")).use { dos ->
+        DataInputStream(FileInputStream("super-save.txt")).use { dos ->
             return dos.readUTF()
         }
     } catch (ex: IOException) {

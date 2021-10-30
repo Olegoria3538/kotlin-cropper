@@ -63,7 +63,7 @@ fun mainWindow() {
     }
 
     root.children.addAll(openImageBtn, takeScreenshotBtn, slider, checkBox)
-    val scene = Scene(root, if (pathLastSave == "") 400.0 else 550.0, 50.0)
+    val scene = Scene(root, if (pathLastSave == null) 400.0 else 550.0, 50.0)
 
     scene.onKeyPressed = EventHandler { e: KeyEvent ->
         if (e.code == KeyCode.F) takeScreenshot()
